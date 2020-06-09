@@ -1,6 +1,6 @@
 # Programa Desarrollo de Apps Móviles con Android
 
-Repositorio que formará parte de mis actividades realizadas en el ***Programa de Desarrollo de Aplicaciones Móviles con Android*** impartido en línea por [Coursera - UNAM](https://www.coursera.org/unam).
+Repositorio que formará parte de mis actividades realizadas en el [Programa de Desarrollo de Aplicaciones Móviles con Android](https://www.coursera.org/specializations/programacion-android) impartido en línea por [Coursera - UNAM](https://www.coursera.org/unam).
 
 El programa consistirá de **5 cursos** los cuáles son:
 1. Programa con Java para aplicaciones Android
