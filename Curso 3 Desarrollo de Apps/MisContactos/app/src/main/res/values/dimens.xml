@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nombreContacto">35dp</dimen>
+    <dimen name="atributoContacto">20dp</dimen>
+    <dimen name="margin_dato_contacto">20dp</dimen>
+</resources>
