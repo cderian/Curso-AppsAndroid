@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CicloVida</string>
+    <string name="oncreate">On Create</string>
+    <string name="onstart">On Start</string>
+    <string name="onresume">On Resume</string>
+    <string name="onrestart">On Restart</string>
+    <string name="onpause">On Pause</string>
+    <string name="onstop">On Stop</string>
+    <string name="ondestroy">On Destroy</string>
+</resources>
