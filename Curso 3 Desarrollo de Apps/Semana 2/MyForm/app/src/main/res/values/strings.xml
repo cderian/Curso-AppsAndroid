@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">My Form</string>
+    <string name="hint_nombre">Nombre con al menos un apellido</string>
+    <string name="hint_telefono">Hint: 5512345678</string>
+    <string name="hint_email">Hint: usuario@mail.com</string>
+    <string name="hint_descripcion">Ingresa una descripción de tu contacto</string>
+    <string name="fecha_nacimiento">Fecha de Nacimiento: </string>
+    <string name="boton_siguiente">Siguiente</string>
+    <string name="boton_editar">Editar Datos</string>
+    <string name="confirmar_datos">Confirmar Datos</string>
+    <string name="confirmar_nombre">N/A</string>
+    <string name="confirmar_nacimiento">00/00/0000</string>
+    <string name="confirmar_telefono">5522334455</string>
+    <string name="confirmar_email">na@gmail.com</string>
+    <string name="confirmar_desc">Descripción: N/A</string>
+    <string name="pnombre">nombre</string>
+    <string name="pfechanac">fecha</string>
+    <string name="ptelefono">telefono</string>
+    <string name="pemail">email</string>
+    <string name="pdesc">descripcion</string>
+    <string name="nombre_nulo">Nombre inválido - Verifica que hayas escrito el nombre del contacto</string>
+    <string name="telefono_nulo">Teléfono inválido - Verifica que hayas escrito el teléfono del contacto</string>
+    <string name="telefono_invalido">Teléfono inválido - Verifica que el teléfono sea de 10 digítos</string>
+    <string name="email_invalido">Correo inválido - Verifica que este escrito correctamente</string>
+</resources>
