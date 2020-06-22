@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void inicializarAdaptador () {
-        ContactoAdapter adaptador = new ContactoAdapter(contactos);
+        ContactoAdapter adaptador = new ContactoAdapter(contactos, MainActivity.this);
         listaContactos.setAdapter(adaptador);
     }
 }
