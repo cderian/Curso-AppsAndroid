@@ -3,4 +3,7 @@
     <dimen name="nombreContacto">35dp</dimen>
     <dimen name="atributoContacto">20dp</dimen>
     <dimen name="margin_dato_contacto">20dp</dimen>
+    <dimen name="activity_margin_vertical">16dp</dimen>
+    <dimen name="card_view_corner">5dp</dimen>
+    <dimen name="card_view_nombre">20dp</dimen>
 </resources>
