@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cvContacto"
-    android:layout_width="150dp"
+    android:layout_width="200dp"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/activity_margin_vertical"
     card_view:cardCornerRadius="@dimen/card_view_corner">
@@ -22,21 +22,45 @@
             android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"/>
 
-        <TextView
-            android:id="@+id/tvNombreCV"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nombre"
-            android:textSize="@dimen/card_view_nombre"
-            android:textStyle="bold"/>
+            android:orientation="horizontal">
+            
+            <ImageButton
+                android:id="@+id/btnLike"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/logo_like"
+                />
 
-        <TextView
-            android:id="@+id/tvTelefonoCV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/telefono"
-            android:textSize="@dimen/card_view_nombre"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp">
 
+                <TextView
+                    android:id="@+id/tvNombreCV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombre"
+                    android:textSize="@dimen/card_view_nombre"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvTelefonoCV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/telefono"
+                    android:textSize="@dimen/card_view_nombre"/>
+
+
+            </LinearLayout>
+            
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
