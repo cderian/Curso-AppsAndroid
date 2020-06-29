@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Petagram</string>
+    <string name="favs_label">Los Favoritos</string>
+    <string name="cardview_nombre">Catty</string>
+    <string name="cardview_like">0</string>
+    <string name="action_fav_pets">Fav Pets</string>
+    <string name="action_settings">Menú</string>
+</resources>

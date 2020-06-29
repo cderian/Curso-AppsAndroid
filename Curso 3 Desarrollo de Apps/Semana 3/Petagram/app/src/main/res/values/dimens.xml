@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_name">20dp</dimen>
+    <dimen name="cardview_width">180dp</dimen>
+    <dimen name="cardview_margin">16dp</dimen>
+    <dimen name="cardview_corner">10dp</dimen>
+    <dimen name="cardview_text">25dp</dimen>
+    <dimen name="cardview_image">100dp</dimen>
+    <dimen name="cardview_image_like">15dp</dimen>
+</resources>
