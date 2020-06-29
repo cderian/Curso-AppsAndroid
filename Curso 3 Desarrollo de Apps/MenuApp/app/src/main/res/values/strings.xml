@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MenuApp</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="menu_settings">Opciones</string>
+    <string name="menu_refresh">Refrescar</string>
+    <string name="menu_edit">Editar</string>
+    <string name="menu_delete">Eliminar</string>
+    <string name="texto_main">Derian Estrada</string>
+    <string name="texto_about">Acerca de</string>
+    <string name="texto_settings">Opciones</string>
+    <string name="menu_view">View</string>
+    <string name="menu_detail">View Detail</string>
+</resources>
