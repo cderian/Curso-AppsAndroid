@@ -1,6 +1,7 @@
 package com.cderian.miscontactos;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
@@ -17,11 +18,16 @@ public class DetalleContacto extends AppCompatActivity {
     TextView txtNombre;
     TextView txtTelefono;
     TextView txtEmail;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_contacto);
+
+        toolbar = findViewById(R.id.myActionBar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Bundle parametros = getIntent().getExtras();
         String nombre = parametros.getString(getResources().getString(R.string.pnombre));

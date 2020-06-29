@@ -2,6 +2,7 @@ package com.cderian.miscontactos;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,10 +25,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-        Toolbar miActionBar = findViewById(R.id.miActionBar);
-        setSupportActionBar(miActionBar);
-         */
+        Toolbar myActionBar = findViewById(R.id.myActionBar);
+        setSupportActionBar(myActionBar);
+
         listaContactos = findViewById(R.id.rvContactos);
 
         /*LinearLayoutManager llm = new LinearLayoutManager(this);

@@ -6,6 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+    <include android:id="@+id/myActionBar"
+        layout="@layout/actionbar">
+    </include>
+
     <!--
     <ListView
         android:id="@+id/lstContactos"
@@ -19,6 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
+        android:layout_below="@+id/myActionBar"
+        android:layout_marginTop="10dp"
         android:padding="7dp"/>
 
 </RelativeLayout>
