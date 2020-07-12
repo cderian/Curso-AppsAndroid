@@ -1,4 +1,4 @@
-package com.cderian.miscontactos;
+package com.cderian.miscontactos.pojo;
 
 public class Contacto {
 
