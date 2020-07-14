@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewPet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    android:layout_marginBottom="@dimen/cardview_margin"
+    card_view:cardCornerRadius="@dimen/cardview_corner"
+    card_view:cardElevation="@dimen/cardview_elevation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imgPetCdVw"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/petagram"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="4dp"
+            app:civ_shadow="false"
+            app:civ_shadow_radius="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/likePhoto"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingStart="40dp"
+                android:text="@string/cardview_like"
+                android:textSize="@dimen/cardview_text"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"/>
+
+            <ImageView
+                android:id="@+id/imgRate"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/hueso_fav" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
