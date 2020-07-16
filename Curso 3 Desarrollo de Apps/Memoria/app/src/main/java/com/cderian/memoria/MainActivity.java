@@ -3,9 +3,11 @@ package com.cderian.memoria;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.FileOutputStream;
@@ -17,6 +19,41 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    public void guardarPreferencia (View v) {
+        SharedPreferences preferences =
+                getSharedPreferences(getResources().getString(R.string.id_preferences), Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = preferences.edit();
+        EditText editNombre = findViewById(R.id.editNombre);
+        EditText editCorreo = findViewById(R.id.editCorreo);
+
+        String nombre = editNombre.getText().toString();
+        String correo = editCorreo.getText().toString();
+
+        editor.putString(getResources().getString(R.string.nombre_preferences), nombre);
+        editor.putString(getResources().getString(R.string.correo_preferences), correo);
+
+        editor.commit();
+
+        Toast.makeText(MainActivity.this, "Se ha creado la preferencia compartida",
+                Toast.LENGTH_SHORT).show();
+
+        editNombre.setText("");
+        editCorreo.setText("");
+    }
+
+    public void mostrarPreferencia (View v) {
+        SharedPreferences preferences =
+                getSharedPreferences(getResources().getString(R.string.id_preferences), Context.MODE_PRIVATE);
+
+        String nombre = preferences.getString(getResources().getString(R.string.nombre_preferences), "No existe esa variable");
+        String correo = preferences.getString(getResources().getString(R.string.correo_preferences), "No existe esa variable");
+
+        TextView textView = findViewById(R.id.textPreferenciaCompartida);
+        String preferencia = "\n" + "Nombre: " + nombre + "\n" + "Correo: " + correo;
+        textView.setText(preferencia);
     }
 
     public void generarArchivo(View v) {

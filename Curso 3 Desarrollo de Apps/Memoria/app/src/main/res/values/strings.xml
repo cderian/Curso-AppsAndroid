@@ -2,5 +2,12 @@
     <string name="app_name">Memoria</string>
     <string name="titulo">Manejo de memoria</string>
     <string name="hint_nombre">Nombre</string>
+    <string name="hint_correo">Correo electrónico</string>
+    <string name="boton_guardar_preferencia">Guardar Preferencia</string>
+    <string name="boton_mostrar_preferencia">Mostrar Preferencia</string>
     <string name="boton_guardar">Guardar Archivo</string>
+
+    <string name="id_preferences">DatosPersonales</string>
+    <string name="nombre_preferences">nombre</string>
+    <string name="correo_preferences">correo</string>
 </resources>
