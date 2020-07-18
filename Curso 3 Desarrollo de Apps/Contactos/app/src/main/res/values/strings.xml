@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Mis Contactos</string>
+    <string name="detalle_contacto">Detalle del Contacto</string>
+    <string name="nombre">Derian Estrada</string>
+    <string name="telefono">55557777</string>
+    <string name="email">cderian@gmail.com</string>
+    <string name="likes">0 likes</string>
+    <string name="pnombre">nombre</string>
+    <string name="ptelefono">telefono</string>
+    <string name="pemail">email</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
