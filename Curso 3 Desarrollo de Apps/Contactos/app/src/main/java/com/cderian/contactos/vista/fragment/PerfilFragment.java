@@ -1,4 +1,4 @@
-package com.cderian.contactos.fragment;
+package com.cderian.contactos.vista.fragment;
 
 import android.os.Bundle;
 

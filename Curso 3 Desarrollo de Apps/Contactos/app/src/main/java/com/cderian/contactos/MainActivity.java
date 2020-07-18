@@ -8,8 +8,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.cderian.contactos.adapter.PageAdapter;
-import com.cderian.contactos.fragment.PerfilFragment;
-import com.cderian.contactos.fragment.RecyclerViewFragment;
+import com.cderian.contactos.vista.fragment.PerfilFragment;
+import com.cderian.contactos.vista.fragment.RecyclerViewFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;

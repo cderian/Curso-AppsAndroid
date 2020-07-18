@@ -1,4 +1,4 @@
-package com.cderian.contactos.fragment;
+package com.cderian.contactos.vista.fragment;
 
 import android.os.Bundle;
 
@@ -14,37 +14,40 @@ import android.view.ViewGroup;
 import com.cderian.contactos.R;
 import com.cderian.contactos.adapter.ContactoAdapter;
 import com.cderian.contactos.pojo.Contacto;
+import com.cderian.contactos.presentador.IRecyclerViewFragmentPresenter;
+import com.cderian.contactos.presentador.RecyclerViewFragmentPresenter;
 
 import java.util.ArrayList;
 
-public class RecyclerViewFragment extends Fragment {
+public class RecyclerViewFragment extends Fragment implements IRecyclerViewFragmentView {
 
     private RecyclerView listaContactos;
+    private IRecyclerViewFragmentPresenter presenter;
     ArrayList<Contacto> contactos;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_recycler_view, container, false);
-
         listaContactos = v.findViewById(R.id.rvContactos);
-        LinearLayoutManager glm = new LinearLayoutManager(getActivity());
-        listaContactos.setLayoutManager(glm);
-        inicializarContactos();
-        inicializarAdaptador();
+        presenter = new RecyclerViewFragmentPresenter(this, getContext());
 
         return v;
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
-    public void inicializarContactos () {
-        contactos = new ArrayList<Contacto>();
-        contactos.add(new Contacto("Pau Santillan", "5577886655", "pausantillan@gmail.com", R.drawable.ic_derecho, 0));
-        contactos.add(new Contacto("Ivan Martinez", "5523876321", "ivmtz@gmail.com", R.drawable.ic_quimica, 0));
-        contactos.add(new Contacto("César Delgado", "5534518655", "chelito@gmail.com", R.drawable.ic_soccer, 0));
+    @Override
+    public void generarLinearLayoutVertical() {
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        listaContactos.setLayoutManager(llm);
     }
 
-    public void inicializarAdaptador () {
+    @Override
+    public ContactoAdapter crearAdaptador(ArrayList<Contacto> contactos) {
         ContactoAdapter adaptador = new ContactoAdapter(contactos, getActivity());
+        return adaptador;
+    }
+
+    @Override
+    public void inicializarAdaptador(ContactoAdapter adaptador) {
         listaContactos.setAdapter(adaptador);
     }
 }
