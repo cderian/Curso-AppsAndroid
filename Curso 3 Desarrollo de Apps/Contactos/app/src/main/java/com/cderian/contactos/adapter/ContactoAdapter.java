@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.cderian.contactos.ContactoActivity;
 import com.cderian.contactos.R;
+import com.cderian.contactos.database.ConstructorContactos;
 import com.cderian.contactos.pojo.Contacto;
 
 import java.util.ArrayList;
@@ -48,7 +49,7 @@ public class ContactoAdapter extends RecyclerView.Adapter<ContactoAdapter.Contac
      * @param position
      */
     @Override
-    public void onBindViewHolder(@NonNull ContactoViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ContactoViewHolder holder, int position) {
         final Contacto contacto = contactos.get(position);
         holder.imgFotoCV.setImageResource(contacto.getFoto());
         holder.tvNombreCV.setText(contacto.getNombre());
@@ -72,6 +73,9 @@ public class ContactoAdapter extends RecyclerView.Adapter<ContactoAdapter.Contac
             @Override
             public void onClick(View v) {
                 Toast.makeText(activity, "Diste like a " + contacto.getNombre(), Toast.LENGTH_SHORT).show();
+                ConstructorContactos constructor = new ConstructorContactos(activity);
+                constructor.darLike(contacto);
+                holder.tvLikes.setText(constructor.obtenerLikes(contacto));
             }
         });
     }

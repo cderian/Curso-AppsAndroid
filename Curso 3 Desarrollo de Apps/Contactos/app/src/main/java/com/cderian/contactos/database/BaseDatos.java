@@ -64,11 +64,25 @@ public class BaseDatos extends SQLiteOpenHelper {
             contacto.setEmail(registros.getString(3));
             contacto.setFoto(registros.getInt(4));
 
+            String queryLikes = "SELECT COUNT ("
+                    + ConstanteBDD.TABLA_LIKES_NUMERO + ") AS likes "
+                    + "FROM " + ConstanteBDD.TABLA_LIKES + " "
+                    + "WHERE " + ConstanteBDD.TABLA_LIKES_ID_CONTACTO
+                    + "="
+                    + contacto.getId();
+
+            Cursor registroLikes = database.rawQuery(queryLikes, null);
+
+            if (registroLikes.moveToNext()) {
+                contacto.setLikes(registroLikes.getInt(0));
+            } else {
+                contacto.setLikes(0);
+            }
+
             contactos.add(contacto);
         }
 
         database.close();
-
         return contactos;
     }
 
@@ -76,5 +90,36 @@ public class BaseDatos extends SQLiteOpenHelper {
         SQLiteDatabase database = this.getWritableDatabase();
         database.insert(ConstanteBDD.TABLA_CONTACTO, null, contentValues);
         database.close();
+    }
+
+    public void insertarLike (ContentValues contentValues) {
+        SQLiteDatabase database = this.getWritableDatabase();
+        database.insert(ConstanteBDD.TABLA_LIKES, null, contentValues);
+        database.close();
+    }
+
+    public int obtenerLikes (Contacto contacto) {
+        System.out.println("BDD -> Obteniendo like");
+        int likes = 0;
+
+        String query = "SELECT COUNT (" + ConstanteBDD.TABLA_LIKES_NUMERO + ") AS likes "
+                + "FROM " + ConstanteBDD.TABLA_LIKES + " "
+                + "WHERE " +  ConstanteBDD.TABLA_LIKES_ID_CONTACTO
+                + "="
+                + contacto.getId();
+
+        System.out.println(query);
+
+        SQLiteDatabase database = this.getWritableDatabase();
+        Cursor registros  = database.rawQuery(query, null);
+
+        if (registros.moveToNext()) {
+            likes = registros.getInt(0);
+        } else {
+            likes = 0;
+        }
+
+        database.close();
+        return likes;
     }
 }
