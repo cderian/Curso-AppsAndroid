@@ -11,6 +11,6 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/myActionBar"
         android:layout_marginTop="@dimen/margin"
-        android:padding="@dimen/margin"/>
+        android:padding="@dimen/margin" />
 
 </LinearLayout>

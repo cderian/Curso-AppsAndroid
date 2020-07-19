@@ -75,7 +75,7 @@ public class ContactoAdapter extends RecyclerView.Adapter<ContactoAdapter.Contac
                 Toast.makeText(activity, "Diste like a " + contacto.getNombre(), Toast.LENGTH_SHORT).show();
                 ConstructorContactos constructor = new ConstructorContactos(activity);
                 constructor.darLike(contacto);
-                holder.tvLikes.setText(constructor.obtenerLikes(contacto));
+                holder.tvLikes.setText(Integer.toString(constructor.obtenerLikes(contacto)));
             }
         });
     }
