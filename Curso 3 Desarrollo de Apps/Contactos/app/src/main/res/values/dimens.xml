@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="nombreContacto">35dp</dimen>
-    <dimen name="atributoContacto">20dp</dimen>
-    <dimen name="margin_dato_contacto">20dp</dimen>
-    <dimen name="activity_margin_vertical">16dp</dimen>
+    <dimen name="perfil_nombre_contacto">30dp</dimen>
+    <dimen name="perfil_dato_contacto">20dp</dimen>
+    <dimen name="lista_nombre_contacto">20dp</dimen>
+    <dimen name="lista_dato_contacto">17dp</dimen>
     <dimen name="card_view_corner">5dp</dimen>
-    <dimen name="card_view_nombre">17dp</dimen>
+    <dimen name="margin">10dp</dimen>
     <dimen name="elevation">4dp</dimen>
+    <dimen name="image_size">38dp</dimen>
 </resources>

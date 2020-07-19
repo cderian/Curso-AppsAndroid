@@ -60,9 +60,10 @@ public class ContactoAdapter extends RecyclerView.Adapter<ContactoAdapter.Contac
             public void onClick(View v) {
                 Toast.makeText(activity, contacto.getNombre(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(activity, ContactoActivity.class);
-                intent.putExtra("nombre", contacto.getNombre());
-                intent.putExtra("telefono", contacto.getTelefono());
-                intent.putExtra("email", contacto.getEmail());
+                intent.putExtra(v.getResources().getString(R.string.pnombre), contacto.getNombre());
+                intent.putExtra(v.getResources().getString(R.string.ptelefono), contacto.getTelefono());
+                intent.putExtra(v.getResources().getString(R.string.pemail), contacto.getEmail());
+                intent.putExtra(v.getResources().getString(R.string.pfoto), contacto.getFoto());
                 activity.startActivity(intent);
             }
         });

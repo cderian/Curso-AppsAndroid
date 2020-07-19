@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ContactoActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class ContactoActivity extends AppCompatActivity {
     TextView txtNombre;
     TextView txtTelefono;
     TextView txtEmail;
+    ImageView imgUser;
     private Toolbar toolbar;
 
     @Override
@@ -33,14 +35,17 @@ public class ContactoActivity extends AppCompatActivity {
         String nombre = parametros.getString(getResources().getString(R.string.pnombre));
         String telefono = parametros.getString(getResources().getString(R.string.ptelefono));
         String email = parametros.getString(getResources().getString(R.string.pemail));
+        int foto = parametros.getInt(getResources().getString(R.string.pfoto));
 
         txtNombre = findViewById(R.id.txtNombre);
         txtTelefono = findViewById(R.id.txtTelefono);
         txtEmail = findViewById(R.id.txtEmail);
+        imgUser = findViewById(R.id.imageUser);
 
         txtNombre.setText(nombre);
         txtTelefono.setText(telefono);
         txtEmail.setText(email);
+        imgUser.setImageResource(foto);
     }
 
     public void llamar (View v) {

@@ -11,15 +11,27 @@
         layout="@layout/actionbar">
     </include>
 
-    <TextView
-        android:id="@+id/txtNombre"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/nombre"
-        android:textStyle="bold"
-        android:textSize="@dimen/nombreContacto"
-        android:layout_marginTop="10dp"
-        />
+        android:orientation="horizontal"
+        android:padding="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/imageUser"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:src="@mipmap/ic_user" />
+
+        <TextView
+            android:id="@+id/txtNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre"
+            android:textStyle="bold"
+            android:textSize="@dimen/perfil_nombre_contacto"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,9 +50,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/telefono"
-            android:textSize="@dimen/atributoContacto"
+            android:textSize="@dimen/perfil_dato_contacto"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/margin_dato_contacto" />
+            android:layout_marginLeft="@dimen/margin"/>
     </LinearLayout>
 
     <LinearLayout
@@ -60,9 +72,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email"
-            android:textSize="@dimen/atributoContacto"
+            android:textSize="@dimen/perfil_dato_contacto"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/margin_dato_contacto"/>
+            android:layout_marginLeft="@dimen/margin"/>
 
     </LinearLayout>
 

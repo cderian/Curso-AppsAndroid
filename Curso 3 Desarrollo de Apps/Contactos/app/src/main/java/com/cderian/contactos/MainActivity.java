@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout.getTabAt(0).setIcon(R.mipmap.ic_contact);
         tabLayout.getTabAt(1).setIcon(R.mipmap.ic_inlove);
-
     }
 
 }

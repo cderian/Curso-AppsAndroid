@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/myActionBar"
-        android:layout_marginTop="10dp"
-        android:padding="7dp"/>
+        android:layout_marginTop="@dimen/margin"
+        android:padding="@dimen/margin"/>
 
 </LinearLayout>

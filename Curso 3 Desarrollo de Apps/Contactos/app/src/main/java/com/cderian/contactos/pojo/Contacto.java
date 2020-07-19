@@ -9,6 +9,8 @@ public class Contacto {
     private int foto;
     private int likes;
 
+    public Contacto () {}
+
     public Contacto(String nombre, String telefono, String email, int foto, int likes) {
         this.nombre = nombre;
         this.telefono = telefono;

@@ -1,5 +1,6 @@
 package com.cderian.contactos.database;
 
+import android.content.ContentValues;
 import android.content.Context;
 
 import com.cderian.contactos.R;
@@ -16,10 +17,31 @@ public class ConstructorContactos {
     }
 
     public ArrayList<Contacto> obtenerDatos () {
-        ArrayList<Contacto> contactos = new ArrayList<Contacto>();
-        contactos.add(new Contacto("Pau Santillan", "5577886655", "pausantillan@gmail.com", R.drawable.ic_derecho, 0));
-        contactos.add(new Contacto("Ivan Martinez", "5523876321", "ivmtz@gmail.com", R.drawable.ic_quimica, 0));
-        contactos.add(new Contacto("César Delgado", "5534518655", "chelito@gmail.com", R.drawable.ic_soccer, 0));
-        return contactos;
+        BaseDatos database = new BaseDatos(context);
+        insertarDatos(database);
+        return database.obtenerTodosContactos();
+    }
+
+    public void insertarDatos (BaseDatos database) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_NOMBRE, "Pau Santillán");
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_TELEFONO, "5577886655");
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_EMAIL, "pausantillan@gmail.com");
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_FOTO, R.drawable.ic_derecho);
+        database.insertarContacto(contentValues);
+
+        contentValues = new ContentValues();
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_NOMBRE, "Mireya Martínez");
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_TELEFONO, "5510101111");
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_EMAIL, "mirem@gmail.com");
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_FOTO, R.drawable.ic_libros);
+        database.insertarContacto(contentValues);
+
+        contentValues = new ContentValues();
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_NOMBRE, "Mauro Estrada");
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_TELEFONO, "5555107788");
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_EMAIL, "mauroes@gmail.com");
+        contentValues.put(ConstanteBDD.TABLA_CONTACTO_FOTO, R.drawable.ic_soccer);
+        database.insertarContacto(contentValues);
     }
 }
