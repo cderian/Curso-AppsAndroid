@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MyCallLog</string>
+    <string name="llamadas">Llamadas</string>
+    <string name="boton_llamadas">Mostrar log llamadas</string>
+    
+    <string name="llamada_entrada">Llamada Entrada</string>
+    <string name="llamada_salida">Llamada Salida</string>
+    <string name="llamada_perdida">Llamada Perdida</string>
+    <string name="llamada_desconocida">Llamada Desconocida</string>
+
+    <string name="etiqueta_numero">Número:</string>
+    <string name="etiqueta_fecha">Fecha:</string>
+    <string name="etiqueta_tipo">Tipo:</string>
+    <string name="etiqueta_duracion">Duración:</string>
+</resources>
